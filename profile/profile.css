@@ -1,0 +1,143 @@
+body {
+  font-family: 'Roboto', sans-serif;
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+  background-color: #f4f4f4;
+}
+
+header {
+  background-color: #176667;
+  color: rgb(244, 244, 244);
+  text-align: center;
+  padding: 1em;
+}
+
+button {
+  background-color: #0096b4;
+  color: white;
+  padding: 0.5em 1em;
+  border: none;
+  cursor: pointer;
+}
+
+.chat-container {
+  display: flex;
+  flex-wrap: wrap; /* Allow items to wrap to the next row */
+}
+
+.user-list {
+  flex: 1;
+  margin: 20px;
+  background-color: #fff;
+  padding: 20px;
+  box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+}
+
+.chat-section {
+  flex: 2;
+  margin: 20px;
+  background-color: #fff;
+  padding: 20px;
+  box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+}
+
+#searchInput {
+  margin-bottom: 10px;
+}
+
+#userList {
+  list-style-type: none;
+  padding: 0;
+}
+
+#userList li {
+  cursor: pointer;
+  margin-bottom: 5px;
+}
+
+.modal {
+  display: none;
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  background-color: rgba(0, 0, 0, 0.5);
+}
+
+.modal-content {
+  background-color: #fefefe;
+  margin: 10% auto;
+  padding: 20px;
+  border: 1px solid #888;
+  width: 70%;
+  border-radius: 8px;
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
+}
+
+.close {
+  float: right;
+  cursor: pointer;
+}
+
+.messages-container {
+  max-height: 400px;
+  overflow-y: auto;
+}
+
+.message-card {
+  border: 1px solid #ddd;
+  border-radius: 8px;
+  padding: 10px;
+  margin-bottom: 10px;
+  background-color: #fff;
+  box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+}
+
+.message-input-container {
+  margin-top: 10px;
+}
+
+#messageInput {
+  flex: 1;
+  margin-right: 10px;
+}
+
+#messageInput,
+button {
+  padding: 20px;
+  font-size: 14px;
+  border: 1px solid #02b9b9;
+  border-radius: 4px;
+}
+
+.user-card {
+  background-color: #fff;
+  padding: 20px;
+  box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+  margin-bottom: 20px;
+}
+
+
+button:hover {
+  background-color: #005e6d;
+  
+}
+
+/* Media Query for smaller screens */
+@media only screen and (max-width: 600px) {
+  .chat-container {
+    flex-direction: column; /* Change to a column layout for smaller screens */
+  }
+
+  .user-list,
+  .chat-section {
+    flex: 1; /* Make both sections take full width on smaller screens */
+    margin: 10px; /* Reduce margin for smaller screens */
+  }
+
+  .modal-content {
+    width: 90%; /* Adjust modal width for smaller screens */
+  }
+}

@@ -1,0 +1,61 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>User Profile</title>
+  <link rel="stylesheet" href="profile.css">
+</head>
+
+<body>
+  <header>
+    <h1>Take a Look</h1>
+    
+  </header>
+
+  <section class="user-details">
+    <h2>your details</h2>
+    <div id="user-info" class="user-card">
+    </div>
+    <button onclick="signOut()">Sign Out</button>
+  </section>
+
+  <section class="chat-container">
+    <section class="user-list">
+      <h2>All Users</h2>
+      <input type="text" id="searchInput" oninput="searchUsers()" placeholder="Search by name">
+      <ul id="userList">
+        <!-- User list will be displayed here dynamically using JavaScript -->
+      </ul>
+    </section>
+
+    <section class="chat-section">
+      <div id="messagesContainer" class="messages-container">
+        <!-- Messages will be displayed here dynamically using JavaScript -->
+      </div>
+
+    </section>
+  </section>
+
+  <div id="messageModal" class="modal">
+    <div class="modal-content">
+      <span class="close" onclick="closeModal()">&times;</span>
+      <h3 id="modalTitle">Send Message</h3>
+      <textarea id="messageInput" placeholder="Type your message..."></textarea>
+      <button onclick="sendMessage()">➤</button>
+    </div>
+  </div>
+
+  
+
+  <script src="https://www.gstatic.com/firebasejs/8.3.1/firebase-app.js"></script>
+  <script src="https://www.gstatic.com/firebasejs/8.3.1/firebase-auth.js"></script>
+  <script src="https://www.gstatic.com/firebasejs/8.3.1/firebase-firestore.js"></script>
+  <script src="profile.js"></script>
+
+  
+</body>
+
+</html>
